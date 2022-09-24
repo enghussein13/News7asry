@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../shared/network/remote/dio_helper.dart';
@@ -64,7 +65,9 @@ class NewsAppController extends GetxController
       update();
     }).catchError((error){
 
-        print(error);
+        if (kDebugMode) {
+          print(error);
+        }
 
     });
   }
@@ -84,7 +87,9 @@ class NewsAppController extends GetxController
       update();
     }).catchError((error){
 
-        print(error);
+        if (kDebugMode) {
+          print(error);
+        }
 
     });
   }
@@ -103,7 +108,9 @@ class NewsAppController extends GetxController
       update();
     }).catchError((error){
 
-        print(error);
+        if (kDebugMode) {
+          print(error);
+        }
 
     });
   }
@@ -120,7 +127,9 @@ class NewsAppController extends GetxController
       update();
     }).catchError((error){
 
-        print(error);
+        if (kDebugMode) {
+          print(error);
+        }
 
     });}
 
@@ -139,12 +148,16 @@ class NewsAppController extends GetxController
 
       search= value.data['articles'];
 
-        print(value);
+        if (kDebugMode) {
+          print(value);
+        }
 
       update();
     }).catchError((error){
 
-        print(error);
+        if (kDebugMode) {
+          print(error);
+        }
 
     });}
 
