@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../shared/network/remote/dio_helper.dart';
@@ -58,15 +57,15 @@ class NewsAppController extends GetxController
           'country':'eg',
           'language':'ar',
           'category':'general',
-          'apiKey':'14877010685342efb02fc7d80ee55fd8'
+          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca'
         }
     ).then((value) {
       general=value.data['articles'];
       update();
     }).catchError((error){
-      if (kDebugMode) {
+
         print(error);
-      }
+
     });
   }
 
@@ -78,15 +77,15 @@ class NewsAppController extends GetxController
           'country':'eg',
           'language':'ar',
           'category':'business',
-          'apiKey':'14877010685342efb02fc7d80ee55fd8'
+          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca'
         }
     ).then((value) {
       business=value.data['articles'];
       update();
     }).catchError((error){
-      if (kDebugMode) {
+
         print(error);
-      }
+
     });
   }
   void getSportData(){
@@ -95,7 +94,7 @@ class NewsAppController extends GetxController
           'country':'eg',
           'language':'ar',
           'category':'sports',
-          'apiKey':'14877010685342efb02fc7d80ee55fd8'
+          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca'
         }
     ).then((value) {
       //print(value.data['articles'][0]['title']);
@@ -104,9 +103,8 @@ class NewsAppController extends GetxController
       update();
     }).catchError((error){
 
-      if (kDebugMode) {
         print(error);
-      }
+
     });
   }
   void getHealthData(){
@@ -115,15 +113,15 @@ class NewsAppController extends GetxController
           'country':'eg',
           'language':'ar',
           'category':'health',
-          'apiKey':'14877010685342efb02fc7d80ee55fd8'
+          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca'
         }
     ).then((value) {
       health=value.data['articles'];
       update();
     }).catchError((error){
-      if (kDebugMode) {
+
         print(error);
-      }
+
     });}
 
   //------------Search Function-----
@@ -135,19 +133,19 @@ class NewsAppController extends GetxController
         query:{
           'q':value,
           'language':'ar',
-          'apiKey':'14877010685342efb02fc7d80ee55fd8'
+          'apiKey':'65f7f556ec76449fa7dc7c0069f040ca'
         }
     ).then((value) {
 
       search= value.data['articles'];
-      if (kDebugMode) {
+
         print(value);
-      }
+
       update();
     }).catchError((error){
-      if (kDebugMode) {
+
         print(error);
-      }
+
     });}
 
 
